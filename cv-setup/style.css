@@ -24,28 +24,64 @@ h6 {
 h1 {
   font-size: 50px;
 }
-/*******************************************************************************/
-/* links */
-a {
-  text-decoration: none;
-  color: rgb(190, 190, 190);
-}
-
-.contact {
-  color: rgb(167, 164, 164);
-}
 
 /*******************************************************************************/
-/* layout */
-
-.header {
-  padding: 20px 30px 60px 30px;
-  text-align: center;
-  background-color: rgb(109, 105, 105);
-}
+/* main */
 
 .main {
   padding: 40px 30px 20px 30px;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.main article {
+  margin: 10px 0px 10px 0px;
+  padding: 10px 30px 10px 30px;
+}
+article + article {
+  border-top: black solid 1px;
+}
+
+section {
+  margin: 20px 0px 0px 0px;
+}
+/*******************************************************************************/
+/* header-navigation*/
+
+.header {
+  padding: 20px 30px 30px 30px;
+  text-align: center;
+  background-color: #778899;
+}
+header p {
+  padding-bottom: 10px;
+}
+header > a {
+  padding: 5px 60px 5px 60px;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+header a:hover {
+  background-color: #ffffff1a;
+  color: #c5c6c7;
+}
+/*******************************************************************************/
+/* contact */
+#contact a:link {
+  color: #778899;
+  text-decoration: none;
+}
+#contact a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+#contact a:hover {
+  color: #000000;
+  border-bottom: black solid 1px;
+}
+#contact a:active {
+  color: #ffffff;
+  background-color: #a1afbd;
+  border-radius: 10px 0px 10px 0px;
 }
