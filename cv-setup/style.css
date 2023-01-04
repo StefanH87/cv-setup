@@ -21,13 +21,27 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-size: 50px;
+}
+/*******************************************************************************/
+/* links */
+a {
+  text-decoration: none;
+  color: rgb(190, 190, 190);
+}
+
+.contact {
+  color: rgb(167, 164, 164);
+}
+
 /*******************************************************************************/
 /* layout */
 
 .header {
-  padding: 40px 30px 60px 30px;
+  padding: 20px 30px 60px 30px;
   text-align: center;
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(109, 105, 105);
 }
 
 .main {
