@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+/*******************************************************************************/
+/* fonts */
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+/*******************************************************************************/
+/* layout */
+
+.header {
+  padding: 40px 30px 60px 30px;
+  text-align: center;
+  background-color: rgb(199, 199, 199);
+}
+
+.main {
+  padding: 40px 30px 20px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
