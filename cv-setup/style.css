@@ -12,8 +12,9 @@ body {
 }
 /*******************************************************************************/
 /* fonts */
-* {
+html {
   font-family: "Quicksand", sans-serif;
+  font-family: inherit;
 }
 
 h1 {
@@ -22,7 +23,12 @@ h1 {
 
 h1,
 h2,
-h4 {
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+a,
+#subheading {
   font-family: "Roboto", sans-serif;
 }
 
@@ -49,9 +55,16 @@ section {
 /*******************************************************************************/
 /* header-navigation*/
 
+.name {
+  color: rgb(37, 37, 37);
+  color: #252525;
+  margin: 0 auto;
+}
+
 .header {
   padding: 20px 30px 30px 30px;
   text-align: center;
+  background-color: rgb(119, 137, 161);
   background-color: #778899;
 }
 header p {
@@ -68,14 +81,15 @@ header a:hover {
   color: #c5c6c7;
 }
 
-#subheading::after {
+#subheading {
   content: "🤓";
   padding-left: 10px;
-  font-size: 140%;
+  font-size: 110%;
 }
 /*******************************************************************************/
 /* contact */
 #contact a:link {
+  color: rgb(119, 137, 161);
   color: #778899;
   text-decoration: none;
 }
