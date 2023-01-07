@@ -32,6 +32,9 @@ a,
   font-family: "Roboto", sans-serif;
 }
 
+h1,
+#subheading {
+}
 /*******************************************************************************/
 /* main */
 
@@ -53,6 +56,13 @@ section {
   margin: 20px 0px 0px 0px;
 }
 
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-subheading {
+  display: inline-block;
+}
 /*******************************************************************************/
 /* header-navigation*/
 
