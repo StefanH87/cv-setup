@@ -4,6 +4,7 @@
 
 body {
   margin: 0px;
+  position: relative;
 }
 
 ::selection {
@@ -25,6 +26,11 @@ h1,
 h2,
 h3 {
   font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  position: relative;
+  right: 20px;
 }
 
 a,
@@ -71,13 +77,30 @@ section {
   color: #252525;
   margin: 0 auto;
 }
-
+.hire {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid whitesmoke;
+  border: 1px solid #f5f5f5;
+  background-color: rgb(119, 137, 161);
+  background-color: #778899;
+  color: whitesmoke;
+  color: #f5f5f5;
+  width: 80px;
+  height: 50px;
+  top: 0px;
+  right: 0px;
+  left: auto;
+  margin: 5px;
+}
 .header {
   padding: 20px 30px 30px 30px;
   text-align: center;
   background-color: rgb(119, 137, 161);
   background-color: #778899;
   box-shadow: 0px 140px 100px -90px #30383f inset;
+  border: none;
+  position: relative;
 }
 header p {
   padding-bottom: 10px;
@@ -98,6 +121,7 @@ header a:hover {
   padding-left: 10px;
   font-size: 110%;
 }
+
 /*******************************************************************************/
 /* contact */
 #contact a:link {
