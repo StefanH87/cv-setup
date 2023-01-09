@@ -33,6 +33,9 @@ h2 {
   font-family: "Roboto", sans-serif;
 }
 
+.navi {
+  font-family: "Roboto", sans-serif;
+}
 .experience-heading {
   display: inline-block;
 }
@@ -59,7 +62,7 @@ article + article {
   border-top: black solid 1px;
 }
 
-section {
+-section {
   margin: 20px 0px 0px 0px;
 }
 
@@ -150,4 +153,57 @@ header a:hover {
   color: #ffffff;
   background-color: #a1afbd;
   border-radius: 10px 0px 10px 0px;
+}
+/*******************************************************************************/
+/* media queries */
+
+@media print {
+  .navi,
+  .hire {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  article {
+    max-width: 50ch;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  article {
+    max-width: 90ch;
+  }
+  section {
+    margin: 30px 0px 0px 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .experience-heading {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  article {
+    font-size: 1.3rem;
+    max-width: 90ch;
+  }
+  .navi {
+    font-size: 1.3rem;
+  }
+  .hire {
+    position: fixed;
+    right: 0.5em;
+    top: 0.5em;
+    width: 100px;
+    height: 60px;
+    padding: 0.4em;
+    border-radius: 20px 0px 20px 0px;
+  }
+  li {
+    margin: 0.3em;
+  }
 }
