@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 html {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-family: inherit;
   font-size: 16px;
 }
@@ -33,15 +34,21 @@ h2 {
   font-family: "Roboto", sans-serif;
 }
 
-.navi {
-  font-family: "Roboto", sans-serif;
-}
 .experience-heading {
-  display: inline-block;
+  -display: inline-block;
 }
 
 .experience-subheading {
-  display: inline-block;
+  -display: inline-block;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.experience-heading,
+.experience-subheading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /*******************************************************************************/
@@ -57,6 +64,7 @@ h2 {
 .main article {
   margin: 10px 0px 10px 0px;
   padding: 10px 30px 10px 30px;
+  font-weight: 300;
 }
 article + article {
   border-top: black solid 1px;
@@ -71,6 +79,16 @@ article + article {
 
 .main-group {
   font-size: 3.5rem;
+}
+header > a {
+  padding: 5px 60px 5px 60px;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profession {
@@ -102,9 +120,11 @@ article + article {
 header p {
   padding-bottom: 10px;
 }
-header > a {
+.nav-list > a {
   padding: 5px 60px 5px 60px;
   text-decoration: none;
+  font-weight: unset;
+  font-weight: 100;
   color: #f5f5f5;
 }
 
@@ -176,6 +196,17 @@ header a:hover {
   }
   section {
     margin: 30px 0px 0px 0px;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .experience-heading,
+  .experience-subheading {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
