@@ -67,7 +67,7 @@ h2 {
   font-weight: 300;
 }
 article + article {
-  border-top: black solid 1px;
+  border-top: solid #98abbe 1px;
 }
 
 -section {
@@ -99,21 +99,28 @@ header > a {
 }
 
 .name {
-  color: rgb(37, 37, 37);
-  color: #252525;
+  -color: rgb(37, 37, 37);
+  -color: #252525;
   margin: 0 auto;
 
   font-size: 1em;
   font-family: "Roboto", sans-serif;
+  color: transparent;
+  background-image: linear-gradient(90deg, #5f5e5e 20%, #252525 45%, black 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .header {
   padding: 30px 20px;
   padding-top: 40px;
   text-align: center;
-  background-color: rgb(119, 137, 161);
-  background-color: #778899;
-  box-shadow: 0px 140px 100px -90px #30383f inset;
+  background-image: linear-gradient(
+    90deg,
+    #98abbe 10%,
+    #778899 40%,
+    #525e69 90%
+  );
   border: none;
   position: relative;
 }
@@ -174,6 +181,25 @@ header a:hover {
   background-color: #a1afbd;
   border-radius: 10px 0px 10px 0px;
 }
+/*******************************************************************************/
+/* footer */
+footer {
+  height: 100vw;
+  height: 100px;
+  background-image: linear-gradient(
+    90deg,
+    #cfdae4 10%,
+    #98abbe 50%,
+    #778899 70%
+  );
+  color: #cfdae4;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*******************************************************************************/
 /* media queries */
 
