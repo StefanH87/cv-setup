@@ -3,7 +3,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-html {
+:root {
   font-family: "Raleway", sans-serif;
   font-family: inherit;
   font-size: 16px;
@@ -12,15 +12,82 @@ html {
 body {
   margin: 0px;
   position: relative;
+  /*********************************************************************************************************************/
+  /***********************************custom-propertie-start***************************************/
+  /*********************************************************************************************************************/
+  --page-background-color: white;
+  --page-text-color: black;
+  --selection-color: var(--header-medium);
+
+  /******header-background************/
+  --header-dark: #525e69;
+  --header-medium: #778899;
+  --header-light: #98abbe;
+
+  /******footer-background************/
+  --footer-dark: var(--header-medium);
+  --footer-medium: var(--header-light);
+  --footer-light: #cfdae4;
+
+  /******Name************/
+  --name-dark: rgb(0, 0, 0);
+  --name-medium: #252525;
+  --name-light: #5f5e5e;
+
+  /******hire-me************/
+  --hire-background-: var(--header-medium);
+  --hire-nav-color: whitesmoke;
+
+  /******Standart************/
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  /******border-article************/
+  --article-border: #98abbe;
+
+  /******contact-links************/
+  --a-active: #ffffff;
+  --a-link: var(--header-medium);
+  --a-contact: black;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --page-background-color: black;
+    --page-text-color: white;
+  }
+}
+
+header a:hover {
+  --header-hover: #ffffff1a;
+  --header-hover-text: var(--header-dark);
+}
+
+a:hover,
+a:visited {
+  color: var(--a-contact);
+}
+
+a:link {
+  color: var(--a-link);
+}
+
+a:active {
+  color: var(--a-visited);
+}
+/*********************************************************************************************************************/
+/***********************************custom-propertie-end***************************************/
+/*********************************************************************************************************************/
+
 /*******************************************************************************/
 /* mark */
 ::selection {
-  background-color: #7788996e;
-  color: #f5f5f5;
+  background-color: var(--selection-color);
+  color: whitesmoke;
 }
 /*******************************************************************************/
 /* headings */
+/*******************************************************************************/
 
 h3 {
   font-size: 1.2rem;
@@ -53,12 +120,14 @@ h2 {
 
 /*******************************************************************************/
 /* main */
+/*******************************************************************************/
 
 .main {
   padding: 40px 30px 20px 30px;
   max-width: 800px;
   margin: 0 auto;
   max-width: 90ch;
+  background-color: var(--main-color);
 }
 
 .main article {
@@ -67,7 +136,8 @@ h2 {
   font-weight: 300;
 }
 article + article {
-  border-top: solid #98abbe 1px;
+  border-top: solid var(--article-border) 1px;
+  -border: var(--article-border);
 }
 
 -section {
@@ -76,6 +146,7 @@ article + article {
 
 /*******************************************************************************/
 /* header-navigation*/
+/*******************************************************************************/
 
 .main-group {
   font-size: 3.5rem;
@@ -83,7 +154,8 @@ article + article {
 header > a {
   padding: 5px 60px 5px 60px;
   text-decoration: none;
-  color: #f5f5f5;
+
+  color: var(--nav-color);
 }
 .nav-list {
   display: flex;
@@ -99,14 +171,17 @@ header > a {
 }
 
 .name {
-  -color: rgb(37, 37, 37);
-  -color: #252525;
   margin: 0 auto;
 
   font-size: 1em;
   font-family: "Roboto", sans-serif;
   color: transparent;
-  background-image: linear-gradient(90deg, #5f5e5e 20%, #252525 45%, black 90%);
+  background-image: linear-gradient(
+    90deg,
+    var(--name-light) 20%,
+    var(--name-medium) 45%,
+    var(--name-dark) 90%
+  );
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -117,9 +192,9 @@ header > a {
   text-align: center;
   background-image: linear-gradient(
     90deg,
-    #98abbe 10%,
-    #778899 40%,
-    #525e69 90%
+    var(--header-light) 10%,
+    var(--header-medium) 40%,
+    var(--header-dark) 100%
   );
   border: none;
   position: relative;
@@ -132,23 +207,22 @@ header p {
   text-decoration: none;
   font-weight: unset;
   font-weight: 100;
-  color: #f5f5f5;
+  color: var(--hire-nav-color);
 }
 
 header a:hover {
-  background-color: #ffffff1a;
-  color: #c5c6c7;
+  -background-color: #ffffff1a;
+  background-color: var(--header-hover);
+  color: var(--header-hover-text);
 }
 
 .hire {
   position: absolute;
   font-family: "Roboto", sans-serif;
-  border: 1px solid whitesmoke;
-  border: 1px solid #f5f5f5;
-  background-color: rgb(119, 137, 161);
-  background-color: #778899;
-  color: whitesmoke;
-  color: #f5f5f5;
+  border: 1px solid;
+  border-color: var(--hire-nav-color);
+  background-color: var(--hire-background-);
+  color: var(--hire-nav-color);
   right: 5px;
   top: 5px;
   width: 80px;
@@ -163,36 +237,34 @@ header a:hover {
 }
 /*******************************************************************************/
 /* contact */
+/*******************************************************************************/
 #contact a:link {
-  color: rgb(119, 137, 161);
-  color: #778899;
   text-decoration: none;
 }
 #contact a:visited {
-  color: #000000;
   text-decoration: none;
 }
 #contact a:hover {
-  color: #000000;
-  border-bottom: black solid 1px;
+  border-bottom: var(--article-border) solid 1px;
 }
 #contact a:active {
-  color: #ffffff;
-  background-color: #a1afbd;
+  color: var(--hire-nav-color);
+  background-color: var(--header-light);
   border-radius: 10px 0px 10px 0px;
 }
 /*******************************************************************************/
 /* footer */
+/*******************************************************************************/
 footer {
   height: 100vw;
   height: 100px;
   background-image: linear-gradient(
     90deg,
-    #cfdae4 10%,
-    #98abbe 50%,
-    #778899 70%
+    var(--footer-light) 10%,
+    var(--footer-medium) 50%,
+    var(--footer-dark) 70%
   );
-  color: #cfdae4;
+  color: vr(--hire-nav-color);
   font-size: 1.2rem;
 
   display: flex;
@@ -202,6 +274,7 @@ footer {
 
 /*******************************************************************************/
 /* media queries */
+/*******************************************************************************/
 
 @media print {
   .navi,
