@@ -277,7 +277,7 @@ header a:hover {
 /*******************************************************************************/
 /* footer */
 /*******************************************************************************/
-footer {
+.footer {
   height: 100vw;
   height: 100px;
   background-image: linear-gradient(
@@ -293,7 +293,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer .contact-footer {
+.footer .contact-footer {
   text-decoration: none;
   color: var(--hire-nav-color);
   opacity: 0.7;
@@ -303,7 +303,9 @@ footer .contact-footer {
 /*******************************************************************************/
 
 @media print {
-  .navi,
+  .navi {
+    display: none;
+  }
   .hire {
     display: none;
   }
@@ -316,16 +318,33 @@ footer .contact-footer {
 }
 
 @media screen and (min-width: 786px) {
-  article {
-    max-width: 90ch;
+  .main {
+    max-width: 80ch;
   }
-  section {
-    margin: 30px 0px 0px 0px;
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+  .main-article-content {
+    margin: 3rem;
   }
   .nav-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .main-article-heading {
+    position: relative;
+    left: -1rem;
+  }
+  @media screen and (min-width: 768px) {
+    .experience-header {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
   .experience-heading,
   .experience-subheading {
