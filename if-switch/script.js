@@ -1,7 +1,7 @@
 //05) Coding-Task: If & switch statements
 //-----------------------------------------------//
 //01) Spot the errors and fix them//
-
+/*
 console.log("01) Spot the errors and fix them");
 
 const size = 25;
@@ -18,35 +18,35 @@ if (size > 20) {
 console.log(result);
 // Returns Greater than 10 but should return Greater than 20
 
-//01) oddEven function//
+//01) oddEven function//   */
 
 console.log("02) oddEven function");
 
-let oddEven = 4;
+function oddEven(value) {
+  //value = 4;
 
-if (oddEven === 1) {
-  console.log("oddEven is odd");
-} else if (oddEven === 2) {
-  console.log("oddEven is even");
-} else if (oddEven === 3) {
-  console.log("oddEven is odd");
-} else if (oddEven === 4) {
-  console.log("oddEven is even");
-} else if (oddEven === 5) {
-  console.log("oddEven is odd");
-} else if (oddEven === 6) {
-  console.log("oddEven is even");
-} else if (oddEven === 7) {
-  console.log("oddEven is odd");
-} else if (oddEven === 8) {
-  console.log("oddEven is even");
-} else if (oddEven === 9) {
-  console.log("oddEven is odd");
-} else if (oddEven === 10) {
-  console.log("oddEven is even");
+  if (Math.abs(value) === 1) {
+    console.log("oddEven is odd");
+  } else if (value === 2) {
+    console.log("oddEven is even");
+  } else if (value === 3) {
+    console.log("oddEven is odd");
+  } else if (value === 4) {
+    console.log("oddEven is even");
+  } else if (value === 5) {
+    console.log("oddEven is odd");
+  } else if (value === 6) {
+    console.log("oddEven is even");
+  } else if (value === 7) {
+    console.log("oddEven is odd");
+  } else if (value === 8) {
+    console.log("oddEven is even");
+  } else if (value === 9) {
+    console.log("oddEven is odd");
+  } else if (value === 10) {
+    console.log("oddEven is even");
+  }
 }
-
-// TODO: Implement the oddEven function
 
 console.log(oddEven(4));
 // result should be even
