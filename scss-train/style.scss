@@ -1,0 +1,91 @@
+$primaryColor: #43b16a;
+$primaryBackgroundColor: #f5f5f5;
+
+$bg-clr-dark: darken($primaryColor, 10%);
+$bg-clr-light: lighten($primaryColor, 10%);
+$main-clr-default: $primaryColor;
+$main-clr-dark: darken($primaryColor, 20%);
+$main-clr-light: lighten($primaryColor, 20%);
+$font-size: 1rem;
+
+$font-clr: $primaryBackgroundColor;
+$heading-clr: $primaryColor;
+
+/*=========================================*/
+
+@mixin defaultGrid() {
+  display: grid;
+  place-content: center;
+}
+
+@mixin defaultFlex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*=========================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:is(:root, body) {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  @include defaultGrid();
+}
+
+.car-user__wrapper {
+  width: 16vw;
+  height: 50vh;
+  position: relative;
+  background: $primaryColor;
+  .car-pic__wrapper {
+    @include defaultFlex();
+    width: 100%;
+    height: 35%;
+    border-radius: 0 0 0 30px;
+    background: yellow;
+    .car__pic {
+      width: calc($font-size * 8);
+      aspect-ratio: 1;
+      border-radius: 100%;
+      border: 5px solid green;
+      margin-top: calc($font-size * 4);
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    img {
+      width: calc($font-size * 8);
+      aspect-ratio: 1;
+    }
+  }
+  .car__assets {
+    width: 100%;
+    height: 65%;
+    background: blue;
+  }
+}
+
+.car-pic__wrapper::after,
+.car-pic__wrapper::before {
+  position: absolute;
+  content: "";
+  top: 163px;
+  left: 248px;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background: red;
+  .car-pic__wrapper::before {
+    background: pink;
+  }
+}

@@ -1,0 +1,72 @@
+/*=========================================*/
+/*=========================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:is(:root, body) {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.car-user__wrapper {
+  width: 16vw;
+  height: 50vh;
+  position: relative;
+  background: #43b16a;
+}
+.car-user__wrapper .car-pic__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35%;
+  border-radius: 0 0 0 30px;
+  background: yellow;
+}
+.car-user__wrapper .car-pic__wrapper .car__pic {
+  width: 8rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  border: 5px solid green;
+  margin-top: 4rem;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.car-user__wrapper .car-pic__wrapper img {
+  width: 8rem;
+  aspect-ratio: 1;
+}
+.car-user__wrapper .car__assets {
+  width: 100%;
+  height: 65%;
+  background: blue;
+}
+
+.car-pic__wrapper::after,
+.car-pic__wrapper::before {
+  position: absolute;
+  content: "";
+  top: 163px;
+  left: 248px;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background: red;
+}
+.car-pic__wrapper::after .car-pic__wrapper::before,
+.car-pic__wrapper::before .car-pic__wrapper::before {
+  background: pink;
+}/*# sourceMappingURL=style.css.map */
